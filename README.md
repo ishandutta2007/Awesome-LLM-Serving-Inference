@@ -1,46 +1,47 @@
-# Awesome-LLM-Serving-Inference
+<div align="center">
 
-## Top LLM Serving & Inference Ecosystem
+<a href="https://github.com/ishandutta2007/Awesome-LLM-Serving-Inference">
+  <img src="assets/banner.svg" alt="Awesome LLM Serving & Inference Banner" width="100%" />
+</a>
 
+# ⚡ Awesome LLM Serving & Inference 🚀
 
+[![Awesome](https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jc4xtF58Ve)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-LLM-Serving-Inference/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-LLM-Serving-Inference/graphs/commit-activity)
+[![Followers](https://img.shields.io/github/followers/ishandutta2007?label=Follow)](https://github.com/ishandutta2007)
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+**Curated guide to high-throughput LLM serving engines, inference frameworks, self-hosted deployment runtimes, and managed GPU SaaS platforms.**
 
-*Focused on High-Throughput Inference, Managed Endpoints & Self-Hosted Serving Engines*  
+*Targeted for AI engineers, MLOps practitioners, and distributed infrastructure teams optimizing latency, tokens-per-second (TPS), KV-cache utilization, and GPU compute costs.*
 
-**Last updated: October 2026**
+📅 **Last updated: October 2026**
 
+</div>
 
+---
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **LLM Serving & Inference**. These tools enable teams to deploy language models behind APIs—ranging from managed endpoints that abstract away GPU operations to open-source serving engines that maximize throughput on your own hardware.
+## 📑 Table of Contents
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Platforms](#️-saas--hosted-platforms)
+- [🛠️ Open-Source GitHub Projects](#️-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#️-disclaimer)
 
+---
 
+## 🌐 Sector Overview & Market Dynamics
 
-**Examples** include Together AI, Fireworks AI, Groq, DeepInfra, Baseten, Modal, and vLLM (the category leaders).
+The global **LLM inference and serving infrastructure market** is estimated at **$56 billion in 2026** (with the broader AI inference hardware and software ecosystem exceeding **$115B–$130B**), rapidly eclipsing training spend as production workloads scale to hundreds of trillions of daily tokens. 
 
+The sector exhibits **moderate fragmentation across specialized layers** rather than a pure winner-take-all monopoly: while open-source inference backbones have converged around a select cohort of standard engines (notably **vLLM** for general workloads, **SGLang** for structured generation and prefix reuse, and **TensorRT-LLM** for NVIDIA hardware limits), the cloud API and neo-cloud hosting layer remains fiercely competitive and distributed across specialized low-latency silicon (Groq), high-volume serverless token providers (Fireworks AI, Together AI, DeepInfra), and serverless GPU orchestrators (Modal, Baseten).
 
+---
 
-**Open-source emphasis**: This section is heavily expanded with every major active serving engine for self-hosting, avoiding per-token vendor lock-in, and controlling your inference stack—ideal for teams that need data sovereignty, predictable costs, or maximum throughput. The open-source landscape is anchored by **vLLM** (the PagedAttention standard with the broadest model coverage), **SGLang** (the structured generation and prefix-caching specialist), and **TensorRT-LLM** (NVIDIA's peak-performance engine), with **llama.cpp** and **Ollama** serving local and edge deployments.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
+## ☁️ SaaS / Hosted Platforms
 
 | Platform | Valuation / Company Size | Pricing | Free Tier Limits | Key Highlights & Best For |
 | :--- | :--- | :--- | :--- | :--- |
@@ -56,90 +57,88 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 > [!NOTE]
 > **OctoAI Discontinued**: Acquired by NVIDIA and all hosted services were terminated on October 31, 2024. Technology migrated to NVIDIA NIM.
 
-## Open-Source GitHub Projects
+---
 
+## 🛠️ Open-Source GitHub Projects
 
+Sorted in descending order by GitHub stargazers count:
 
-- **[vLLM](https://github.com/vllm-project/vllm)**  
+- ### 🦙 **[Ollama](https://github.com/ollama/ollama)** [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)
+  **The simplest local deployment framework.** Bundles model weights, configuration, and runtime into unified Modelfiles with a single CLI command. OpenAI-compatible API running locally at `localhost:11434/v1/`. Built on top of llama.cpp. Ideal for local developer environments, edge devices, and offline prototyping.
 
-  **The PagedAttention standard.** 2,000+ contributors. **Key capabilities**: PagedAttention for KV-cache efficiency, continuous batching, chunked prefill, prefix caching, structured outputs via xgrammar/guidance, and tensor/pipeline/expert parallelism . **Model coverage**: 200+ architectures including decoder-only, MoE, hybrid attention, and multimodal. **Hardware**: NVIDIA, AMD (ROCm growing), Intel, TPU, Gaudi. **OpenAI-compatible API** plus Anthropic Messages API and gRPC . **Limitation**: no compilation step means slightly lower peak throughput than TensorRT-LLM on NVIDIA hardware . Best for general-purpose production serving where model breadth and ease of use matter most.
+- ### 💻 **[llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)
+  **The CPU and edge inference standard.** Pure C/C++ engine offering zero-dependency execution across Apple Silicon (Metal), x86/ARM CPUs, CUDA, ROCm, Vulkan, and SYCL. Supports 1.5-bit to 8-bit quantization (GGUF format) and includes a built-in lightweight HTTP server (`llama serve`). Ideal for CPU-only systems, mobile/edge architectures, and mixed CPU/GPU offloading.
 
+- ### ⚡ **[vLLM](https://github.com/vllm-project/vllm)** [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)
+  **The production PagedAttention standard.** Pioneered PagedAttention for non-contiguous KV-cache memory allocation, eliminating fragmentation. Delivers continuous batching, chunked prefill, automatic prefix caching (APC), speculative decoding, tensor/pipeline/expert parallelism, and structured outputs (via xgrammar/guidance). Supports 200+ architectures (decoder, MoE, multimodal) across NVIDIA, AMD ROCm, Intel Gaudi, and TPUs with drop-in OpenAI-compatible API endpoints.
 
+- ### 🚀 **[SGLang](https://github.com/sgl-project/sglang)** [![GitHub stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social&color=white)](https://github.com/sgl-project/sglang/stargazers)
+  **The structured generation and prefix-caching specialist.** Features **RadixAttention** (retaining KV cache across multiple generation calls via radix trees) and compressed finite state machines for high-speed constrained decoding (JSON, regex, grammar). Provides Day-0 support for cutting-edge MoE architectures. Excels in complex agent loops, multi-turn chat, and workflows with heavy prompt reuse (>30–40%).
 
-- **[SGLang](https://github.com/sgl-project/sglang)**  
+- ### 🏎️ **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** [![GitHub stars](https://img.shields.io/github/stars/NVIDIA/TensorRT-LLM?style=social&color=white)](https://github.com/NVIDIA/TensorRT-LLM/stargazers)
+  **NVIDIA's peak-performance inference compiler and runtime.** Provides low-level custom kernels, in-flight batching, FP4/FP8 quantization acceleration on Hopper/Blackwell, disaggregated prefill-decode architectures, and tight Triton integration. Yields the lowest achievable first-token latency (TTFT) on dedicated NVIDIA clusters.
 
-  **The structured generation and prefix-caching specialist.** **RadixAttention** reuses shared prefixes across requests; **compressed FSMs** enable fast structured output (JSON schemas, grammars) . **Performance**: up to ~29% higher throughput in prefix-heavy tests; Day-0 support for new MoE releases (Qwen3.6, Kimi K2.6, MiniMax M2.5) . **Best for**: chatbots with fixed system prompts, agent loops repeating tool schemas, and any workload where >30–40% of prompt content is reused across calls . **Trade-off**: smaller ecosystem than vLLM. Best for structured output and agentic workloads with high prefix reuse.
+- ### 🍱 **[OpenLLM (BentoML)](https://github.com/bentoml/OpenLLM)** [![GitHub stars](https://img.shields.io/github/stars/bentoml/OpenLLM?style=social&color=white)](https://github.com/bentoml/OpenLLM/stargazers)
+  **Production AI application serving and packaging.** Orchestrates high-throughput engines (like vLLM) with BentoML’s enterprise serving stack, auto-scaling microservices, built-in telemetry/observability, and one-click cloud container packaging.
 
+- ### 🎯 **[Triton Inference Server](https://github.com/triton-inference-server/server)** [![GitHub stars](https://img.shields.io/github/stars/triton-inference-server/server?style=social&color=white)](https://github.com/triton-inference-server/server/stargazers)
+  **Enterprise multi-model serving engine.** NVIDIA’s battle-tested inference solution supporting concurrent execution across multiple frameworks (TensorRT, ONNX, PyTorch, TensorRT-LLM) with dynamic batching, GPU metric reporting, and gRPC/HTTP protocols.
 
+- ### 🤗 **[Text Generation Inference (TGI)](https://github.com/huggingface/text-generation-inference)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/text-generation-inference?style=social&color=white)](https://github.com/huggingface/text-generation-inference/stargazers)
+  **Hugging Face's turnkey production serving solution.** Built with Rust and Python, featuring tensor parallelism, FlashAttention-2, continuous batching, token streaming via SSE, watermarking, and native integration with the Hugging Face Hub.
 
-- **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)**  
+- ### 🌐 **[Xinference (Xorbits Inference)](https://github.com/xorbitsai/inference)** [![GitHub stars](https://img.shields.io/github/stars/xorbitsai/inference?style=social&color=white)](https://github.com/xorbitsai/inference/stargazers)
+  **Distributed inference orchestrator for LLMs and multi-modal models.** Seamlessly manages clusters of GPUs and CPUs to host LLMs, speech-to-text, and image generation models simultaneously with automatic worker registration and model routing.
 
-  **NVIDIA's peak-performance engine.** Custom kernels, prefill-decode disaggregation, FP4/FP8 support on Blackwell/Hopper, and integration with Triton and Dynamo . **Lowest measured first-token latency**: 235ms vs vLLM's 514ms in one test . **Trade-offs**: NVIDIA-only, complex build process, per-GPU-generation compilation required . Best for latency-critical production on NVIDIA hardware where you have engineering capacity to manage the toolchain.
+- ### 📦 **[LMDeploy](https://github.com/InternLM/lmdeploy)** [![GitHub stars](https://img.shields.io/github/stars/InternLM/lmdeploy?style=social&color=white)](https://github.com/InternLM/lmdeploy/stargazers)
+  **High-performance multimodal and LLM serving engine.** Powered by the TurboMind C++ inference engine and PyTorch backend. Optimized for deep multimodal comprehension (InternVL series), 4-bit KV cache quantization (AWQ/W4A16), and low-latency token streaming.
 
+- ### ⚡ **[ExLlamaV2](https://github.com/turboderp/exllamav2)** [![GitHub stars](https://img.shields.io/github/stars/turboderp/exllamav2?style=social&color=white)](https://github.com/turboderp/exllamav2/stargazers)
+  **Extreme speed quantization engine for consumer GPUs.** Custom CUDA/C++ implementation designed specifically for EXL2 format quantization (variable bit-rate per layer), delivering the fastest single-GPU generation tokens-per-second on consumer NVIDIA hardware.
 
-
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)**  
-
-  **The edge and CPU standard.** C/C++ engine with first-class Apple Silicon support, plus CUDA, ROCm, Vulkan, and SYCL backends. 1.5-bit to 8-bit quantization. OpenAI-compatible server (`llama serve`) . Best for CPU-only boxes, mixed CPU/GPU offload, edge devices, and local development.
-
-
-
-- **[Ollama](https://github.com/ollama/ollama)**  
-
-  **The simplest local deployment.** Wraps llama.cpp with a one-line install and model library. OpenAI-compatible API at `localhost:11434/v1/`. **Limitations**: less optimized for high-concurrency production serving than vLLM or SGLang . Best for local development, prototyping, and single-user deployments.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **LMDeploy** — InternVL's serving toolkit with TurboMind engine. Best for multimodal model serving.
-
-- **OpenLLM (BentoML)** — Production serving with observability and adaptive batching. Best for teams already using BentoML.
-
-- **Frameworks for building custom systems**: Use **vLLM** as the default serving backbone. Switch to **SGLang** when prefix reuse exceeds 30–40% or structured output is critical . Use **TensorRT-LLM** when lowest first-token latency justifies the toolchain complexity. Use **llama.cpp** or **Ollama** for local and edge. On Modal, deploy **vLLM** or **SGLang** as your engine with per-second billing .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- **Managed vs. self-hosted economics flip at utilization**: Modal's H100 at ~$3.95/hr costs ~$2,845/month if pinned 24/7, versus serverless per-token pricing that scales with actual usage . Model your traffic shape before committing.
-
-- **"Cheapest per token" depends on the model**: DeepInfra leads on most open models, but prices vary 1.2x–4x across providers for the same model . Always compare the specific model you need.
-
-- **OctoAI is discontinued**: NVIDIA acquired it, terminated hosted services October 2024, and migrated technology to NIM . Do not evaluate for new projects.
-
-- **Engine choice depends on your traffic**: vLLM for breadth and ease; SGLang for prefix reuse and structured output; TensorRT-LLM for peak NVIDIA performance with engineering investment . Benchmark against your own prompt patterns, not generic numbers.
-
-
+- ### 🔀 **[LoRAX (Predibase)](https://github.com/predibase/lorax)** [![GitHub stars](https://img.shields.io/github/stars/predibase/lorax?style=social&color=white)](https://github.com/predibase/lorax/stargazers)
+  **Multi-LoRA fine-tuning serving engine.** Enables serving thousands of task-specific LoRA adapters on top of a single shared base model instance in GPU memory, dynamically swapping adapters per request without latency penalties.
 
 ---
 
+### 💡 Framework Selection Cheat Sheet
+* **Default Production Backbone**: Use **[vLLM](https://github.com/vllm-project/vllm)** for the widest model support, multi-GPU scalability, and robust community momentum.
+* **Agent Loops & Schema Constraints**: Choose **[SGLang](https://github.com/sgl-project/sglang)** when prompt prefix caching (>30% reuse) or fast structured JSON output is critical.
+* **Peak NVIDIA Latency / Hardware Optimization**: Deploy **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** on enterprise clusters where first-token latency justifies compilation overhead.
+* **Local, CPU & Edge**: Run **[Ollama](https://github.com/ollama/ollama)** for fast desktop setup or **[llama.cpp](https://github.com/ggml-org/llama.cpp)** for low-level cross-platform embedding.
+* **Multi-Tenant Fine-Tuned Adapters**: Deploy **[LoRAX](https://github.com/predibase/lorax)** to avoid provisioning separate GPU instances per fine-tuned model.
 
+---
 
-**Made for ML engineers, platform teams, and developers deploying LLM inference infrastructure.**  
+## 🤝 How to Contribute
 
-Let's make LLM serving more open, throughput-efficient, and appropriately scoped.
+Contributions are welcome! Help keep this repository comprehensive and accurate:
+
+1. 🍴 **Fork** the repository.
+2. 📝 **Add or update** entries in `README.md` adhering to the table or open-source list format.
+3. 🔍 Ensure links are active and pricing/benchmarks are sourced factually.
+4. 🚀 **Submit a Pull Request** with a brief summary of additions or updates.
+
+---
+
+## 💖 Support
+
+Thank you for exploring and contributing to this ecosystem guide! If you find this repository useful for benchmarking or architecture planning:
+
+- ⭐ **Star** this repository on GitHub.
+- 🍴 **Fork** and share it with your engineering team or community.
+- ☕ If you would like to support ongoing updates, please consider buying a coffee via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-LLM-Serving-Inference&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-LLM-Serving-Inference&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This is an **independently curated community guide** — not an official endorsement of any commercial platform or open-source tool.
+- **Managed vs. Self-Hosted Economics Flip at Utilization**: Dedicated serverless instances (e.g. H100 at ~$3.95/hr costs ~$2,845/month if pinned 24/7) versus per-token consumption scale differently depending on concurrency patterns. Model your request volume and cache hit rate before committing.
+- **Benchmark Against Your Traffic**: Engine performance varies significantly based on prompt lengths, context sizes, and batching strategies. Benchmark with your application's actual prompt distribution.
