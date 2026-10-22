@@ -42,59 +42,19 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
+| Platform | Valuation / Company Size | Pricing | Free Tier Limits | Key Highlights & Best For |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Fireworks AI](https://fireworks.ai/)** | $17.5B valuation ($1B+ ARR) | Serverless starting at $0.14/M input, $0.28/M output (DeepSeek V4 Flash); $0.15/$0.60 (GPT-OSS 120B); Dedicated H100 at $7.00/hr, B200 at $10.00/hr | $1 one-time starter credit (~1M tokens on 70B models); 10 RPM rate limit without payment method (6,000 RPM with payment method) | Per-token serverless with fast inference, fine-tuning workflows, prompt caching (50% off), and batch discounts. |
+| **[Modal](https://modal.com/)** | $15.75B valuation ($1B+ ARR) | Serverless starting at $0.000694/sec (~$2.50/hr) for A100 80GB, $0.001097/sec (~$3.95/hr) for H100 SXM5; 1 TiB/mo egress included | $30/month ongoing compute credits on Starter plan (up to 3 seats, max 10 concurrent GPUs, 100 containers) | Serverless containerized GPU platform with per-second billing, GPU-memory snapshotting, and scale-to-zero. |
+| **[Baseten](https://www.baseten.co/)** | $13.0B valuation (~$600M ARR) | Model APIs starting at $0.10/M input, $0.30/M output; Dedicated instances starting at $0.32/hr (T4) with scale-to-zero | $30 one-time starter credits upon signup; no recurring free tier | Serving engine optimized for agentic workloads with automatic cache token discounts and scale-to-zero model deployment. |
+| **[Together AI](https://www.together.ai/)** | $8.3B valuation ($1.15B+ ARR/bookings) | Serverless starting at $0.10/M input tokens; Dedicated GPU instances from $5.49/hr (H100) and $8.99/hr (B200) | Strictly prepaid (no ongoing free tier; min deposit $5); up to $50,000 credits via application-only startup program | Serverless and dedicated endpoints for open-weight models with prompt caching and batch discounts (50% off). |
+| **[Groq](https://groq.com/)** | $3.5B valuation (~$500M target revenue) | On-demand Developer API starting at $0.075/M input, $0.30/M output (GPT-OSS 20B); $0.15/$0.60 (GPT-OSS 120B) | Free tier included with rate limits: ~30 RPM, 6,000–30,000 TPM, and 100K–500K daily tokens depending on model | LPU-based ultra-low latency inference engine delivering industry-leading generation speeds (~500 tok/s). |
+| **[Anyscale](https://www.anyscale.com/)** | $1.65B valuation (acquired by Nscale) | Managed Ray compute starting at $0.5682/hr (T4), $1.3635/hr (A10G), $4.9591/hr (A100) | $100 one-time starter credits to evaluate compute and endpoints; no ongoing free tier | Managed distributed computing platform built on Ray for unified model serving, data processing, and fine-tuning. |
+| **[Replicate](https://replicate.com/)** | $350M valuation (acquired by Cloudflare) | Per-second compute starting at $0.000100/sec (~$0.36/hr CPU) and $0.000225/sec (~$0.81/hr Nvidia T4 GPU) | Web playground allows limited free trial predictions on select models; API requires prepaid balance; unpaid tier rate-limited to 1 req/sec (6 RPM) | Vast open-source model catalog with pay-per-second API execution for experimentation and rapid prototyping. |
+| **[DeepInfra](https://deepinfra.com/)** | $107M funding ($105M ARR) | Pay-as-you-go starting at $0.02/M input, $0.05/M output (Llama 3.1 8B); $0.09/$0.10 (Qwen3-235B); $1.30/$2.60 (DeepSeek V4 Pro) | No ongoing free tier or default credits (min deposit $10); up to 50B free tokens via DeepStart startup program | Price-performance leader on popular open-source models with prompt caching ($0.10/M cached input) and SOC 2 compliance. |
 
-
-- **[Together AI](https://www.together.ai/)**  
-
-  Serverless and dedicated endpoints for open-weight models. **Serverless pricing** starts around $0.10/M tokens for smaller models, with batch inference and prompt caching at 50% discounts . **Dedicated GPU rates**: H100 $5.49/hr, B200 $8.99/hr, billed per ready replica per minute (provisioning not billed) . Best for teams that want to start serverless and graduate to reserved capacity.
-
-
-
-- **[Fireworks AI](https://fireworks.ai/)**  
-
-  Per-token serverless with transparent rate limits and fine-tuning. **Published rates**: Kimi K2.6 $0.95/$4.00, DeepSeek V4 Flash $0.14/$0.28, GPT-OSS 120B $0.15/$0.60. Cached input gets 50% off; batch runs at 50% of serverless . **Rate limits**: 10 RPM without a payment method, 6,000 RPM with a card. **Dedicated GPUs**: H100 $7.00/hr, B200 $10.00/hr . Best for teams needing predictable ceilings and fine-tuning workflows.
-
-
-
-- **[Groq](https://groq.com/)**  
-
-  **The throughput specialist.** LPU-based inference delivering exceptionally high tokens-per-second (e.g., GPT-OSS 120B at ~500 tok/s) . Fixed model catalog with per-token pricing. Best for latency-sensitive applications where raw generation speed matters more than model breadth.
-
-
-
-- **[DeepInfra](https://deepinfra.com/)**  
-
-  **The per-token price leader on open models.** DeepSeek V4 Pro at $1.30/$2.60, Qwen3-235B at $0.09/$0.10, Llama 3.1 8B at $0.02/$0.05 . Cached input for DeepSeek V4 Pro drops to $0.10/M (vs $1.30 uncached). SOC 2 and ISO 27001 certified, zero retention on inference. Best for cost-sensitive production workloads with predictable token volumes.
-
-
-
-- **[Baseten](https://www.baseten.co/)**  
-
-  Model serving with **cache token pricing**—cached input tokens billed at a discount automatically, benefiting agentic workloads with reused system prompts. Competitive per-token rates (e.g., Kimi K2.6 $0.95/$4.00) . Best for teams serving agent workloads where prompt caching yields meaningful savings.
-
-
-
-- **[Modal](https://modal.com/)**  
-
-  **Serverless GPU platform with per-second billing.** H100 SXM5 at $0.001097/sec (~$3.95/hr); A100 80GB at $0.000694/sec (~$2.50/hr) . **GPU-memory snapshotting** reduced cold start for one model from ~118s to ~12s . **Scale-to-zero** makes it economical for spiky traffic—a 75-GPU peak with 50-GPU average costs less than a fixed fleet despite the higher per-hour rate . **Note**: network egress is billed starting October 2026 (1 TiB/month included on Starter). Best for bursty workloads and teams that want to deploy their own engine (vLLM, SGLang) on serverless GPUs.
-
-
-
-- **[Anyscale](https://www.anyscale.com/)**  
-
-  Managed Ray platform with pay-as-you-go compute. **Instance rates**: T4 $0.5682/hr, A10G $1.3635/hr, A100 $4.9591/hr; H/B/GB families quote-based . Best for teams already using Ray for distributed workloads that want a unified serving layer.
-
-
-
-- **[Replicate](https://replicate.com/)**  
-
-  Pay-per-second model hosting with a vast catalog. Cold starts of 5–30s are common, with costs accumulating per second . Best for experimentation and running community models without infrastructure management.
-
-
-
-- **Note on OctoAI**: **Discontinued.** NVIDIA acquired OctoAI in 2024, terminated all hosted services on October 31, 2024, and the technology was absorbed into NVIDIA NIM . Do not select for new deployments.
-
-
+> [!NOTE]
+> **OctoAI Discontinued**: Acquired by NVIDIA and all hosted services were terminated on October 31, 2024. Technology migrated to NVIDIA NIM.
 
 ## Open-Source GitHub Projects
 
