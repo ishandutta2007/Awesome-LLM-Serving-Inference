@@ -63,40 +63,40 @@ The sector exhibits **moderate fragmentation across specialized layers** rather 
 
 Sorted in descending order by GitHub stargazers count:
 
-- ### 🦙 **[Ollama](https://github.com/ollama/ollama)** [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)
+- ### 🦙 **[Ollama](https://github.com/ollama/ollama)** [![GitHub_Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)
   **The simplest local deployment framework.** Bundles model weights, configuration, and runtime into unified Modelfiles with a single CLI command. OpenAI-compatible API running locally at `localhost:11434/v1/`. Built on top of llama.cpp. Ideal for local developer environments, edge devices, and offline prototyping.
 
-- ### 💻 **[llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)
+- ### 💻 **[llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub_Stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)
   **The CPU and edge inference standard.** Pure C/C++ engine offering zero-dependency execution across Apple Silicon (Metal), x86/ARM CPUs, CUDA, ROCm, Vulkan, and SYCL. Supports 1.5-bit to 8-bit quantization (GGUF format) and includes a built-in lightweight HTTP server (`llama serve`). Ideal for CPU-only systems, mobile/edge architectures, and mixed CPU/GPU offloading.
 
-- ### ⚡ **[vLLM](https://github.com/vllm-project/vllm)** [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)
+- ### ⚡ **[vLLM](https://github.com/vllm-project/vllm)** [![GitHub_Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)
   **The production PagedAttention standard.** Pioneered PagedAttention for non-contiguous KV-cache memory allocation, eliminating fragmentation. Delivers continuous batching, chunked prefill, automatic prefix caching (APC), speculative decoding, tensor/pipeline/expert parallelism, and structured outputs (via xgrammar/guidance). Supports 200+ architectures (decoder, MoE, multimodal) across NVIDIA, AMD ROCm, Intel Gaudi, and TPUs with drop-in OpenAI-compatible API endpoints.
 
-- ### 🚀 **[SGLang](https://github.com/sgl-project/sglang)** [![GitHub stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social&color=white)](https://github.com/sgl-project/sglang/stargazers)
+- ### 🚀 **[SGLang](https://github.com/sgl-project/sglang)** [![GitHub_Stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social&color=white)](https://github.com/sgl-project/sglang/stargazers)
   **The structured generation and prefix-caching specialist.** Features **RadixAttention** (retaining KV cache across multiple generation calls via radix trees) and compressed finite state machines for high-speed constrained decoding (JSON, regex, grammar). Provides Day-0 support for cutting-edge MoE architectures. Excels in complex agent loops, multi-turn chat, and workflows with heavy prompt reuse (>30–40%).
 
-- ### 🏎️ **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** [![GitHub stars](https://img.shields.io/github/stars/NVIDIA/TensorRT-LLM?style=social&color=white)](https://github.com/NVIDIA/TensorRT-LLM/stargazers)
+- ### 🏎️ **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** [![GitHub_Stars](https://img.shields.io/github/stars/NVIDIA/TensorRT-LLM?style=social&color=white)](https://github.com/NVIDIA/TensorRT-LLM/stargazers)
   **NVIDIA's peak-performance inference compiler and runtime.** Provides low-level custom kernels, in-flight batching, FP4/FP8 quantization acceleration on Hopper/Blackwell, disaggregated prefill-decode architectures, and tight Triton integration. Yields the lowest achievable first-token latency (TTFT) on dedicated NVIDIA clusters.
 
-- ### 🍱 **[OpenLLM (BentoML)](https://github.com/bentoml/OpenLLM)** [![GitHub stars](https://img.shields.io/github/stars/bentoml/OpenLLM?style=social&color=white)](https://github.com/bentoml/OpenLLM/stargazers)
+- ### 🍱 **[OpenLLM (BentoML)](https://github.com/bentoml/OpenLLM)** [![GitHub_Stars](https://img.shields.io/github/stars/bentoml/OpenLLM?style=social&color=white)](https://github.com/bentoml/OpenLLM/stargazers)
   **Production AI application serving and packaging.** Orchestrates high-throughput engines (like vLLM) with BentoML’s enterprise serving stack, auto-scaling microservices, built-in telemetry/observability, and one-click cloud container packaging.
 
-- ### 🎯 **[Triton Inference Server](https://github.com/triton-inference-server/server)** [![GitHub stars](https://img.shields.io/github/stars/triton-inference-server/server?style=social&color=white)](https://github.com/triton-inference-server/server/stargazers)
+- ### 🎯 **[Triton Inference Server](https://github.com/triton-inference-server/server)** [![GitHub_Stars](https://img.shields.io/github/stars/triton-inference-server/server?style=social&color=white)](https://github.com/triton-inference-server/server/stargazers)
   **Enterprise multi-model serving engine.** NVIDIA’s battle-tested inference solution supporting concurrent execution across multiple frameworks (TensorRT, ONNX, PyTorch, TensorRT-LLM) with dynamic batching, GPU metric reporting, and gRPC/HTTP protocols.
 
-- ### 🤗 **[Text Generation Inference (TGI)](https://github.com/huggingface/text-generation-inference)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/text-generation-inference?style=social&color=white)](https://github.com/huggingface/text-generation-inference/stargazers)
+- ### 🤗 **[Text Generation Inference (TGI)](https://github.com/huggingface/text-generation-inference)** [![GitHub_Stars](https://img.shields.io/github/stars/huggingface/text-generation-inference?style=social&color=white)](https://github.com/huggingface/text-generation-inference/stargazers)
   **Hugging Face's turnkey production serving solution.** Built with Rust and Python, featuring tensor parallelism, FlashAttention-2, continuous batching, token streaming via SSE, watermarking, and native integration with the Hugging Face Hub.
 
-- ### 🌐 **[Xinference (Xorbits Inference)](https://github.com/xorbitsai/inference)** [![GitHub stars](https://img.shields.io/github/stars/xorbitsai/inference?style=social&color=white)](https://github.com/xorbitsai/inference/stargazers)
+- ### 🌐 **[Xinference (Xorbits Inference)](https://github.com/xorbitsai/inference)** [![GitHub_Stars](https://img.shields.io/github/stars/xorbitsai/inference?style=social&color=white)](https://github.com/xorbitsai/inference/stargazers)
   **Distributed inference orchestrator for LLMs and multi-modal models.** Seamlessly manages clusters of GPUs and CPUs to host LLMs, speech-to-text, and image generation models simultaneously with automatic worker registration and model routing.
 
-- ### 📦 **[LMDeploy](https://github.com/InternLM/lmdeploy)** [![GitHub stars](https://img.shields.io/github/stars/InternLM/lmdeploy?style=social&color=white)](https://github.com/InternLM/lmdeploy/stargazers)
+- ### 📦 **[LMDeploy](https://github.com/InternLM/lmdeploy)** [![GitHub_Stars](https://img.shields.io/github/stars/InternLM/lmdeploy?style=social&color=white)](https://github.com/InternLM/lmdeploy/stargazers)
   **High-performance multimodal and LLM serving engine.** Powered by the TurboMind C++ inference engine and PyTorch backend. Optimized for deep multimodal comprehension (InternVL series), 4-bit KV cache quantization (AWQ/W4A16), and low-latency token streaming.
 
-- ### ⚡ **[ExLlamaV2](https://github.com/turboderp/exllamav2)** [![GitHub stars](https://img.shields.io/github/stars/turboderp/exllamav2?style=social&color=white)](https://github.com/turboderp/exllamav2/stargazers)
+- ### ⚡ **[ExLlamaV2](https://github.com/turboderp/exllamav2)** [![GitHub_Stars](https://img.shields.io/github/stars/turboderp/exllamav2?style=social&color=white)](https://github.com/turboderp/exllamav2/stargazers)
   **Extreme speed quantization engine for consumer GPUs.** Custom CUDA/C++ implementation designed specifically for EXL2 format quantization (variable bit-rate per layer), delivering the fastest single-GPU generation tokens-per-second on consumer NVIDIA hardware.
 
-- ### 🔀 **[LoRAX (Predibase)](https://github.com/predibase/lorax)** [![GitHub stars](https://img.shields.io/github/stars/predibase/lorax?style=social&color=white)](https://github.com/predibase/lorax/stargazers)
+- ### 🔀 **[LoRAX (Predibase)](https://github.com/predibase/lorax)** [![GitHub_Stars](https://img.shields.io/github/stars/predibase/lorax?style=social&color=white)](https://github.com/predibase/lorax/stargazers)
   **Multi-LoRA fine-tuning serving engine.** Enables serving thousands of task-specific LoRA adapters on top of a single shared base model instance in GPU memory, dynamically swapping adapters per request without latency penalties.
 
 ---
